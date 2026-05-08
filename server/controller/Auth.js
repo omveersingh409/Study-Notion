@@ -56,7 +56,14 @@ exports.sendOtp = async (req, res) => {
         const htmlBody = otpTemplate(otp);
 
         // ✅ Call mailSender with correct order
-        await mailSender(email, "OTP Verification Email", htmlBody);
+        const mailResponse = await mailSender(email, "OTP Verification Email", htmlBody);
+
+        if (!mailResponse) {
+            return res.status(500).json({
+                success: false,
+                message: "Could not send OTP email. Please check email credentials.",
+            });
+        }
 
         // Send success response
         res.status(200).json({
