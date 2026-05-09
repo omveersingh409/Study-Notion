@@ -99,7 +99,7 @@ export const addCourseDetails = async (data, token) => {
     result = response?.data?.data
   } catch (error) {
     console.log("CREATE COURSE API ERROR............", error)
-    toast.error(error.message)
+    toast.error(error.response?.data?.message || error.message)
   }
   toast.dismiss(toastId)
   return result
@@ -122,7 +122,7 @@ export const editCourseDetails = async (data, token) => {
     result = response?.data?.data
   } catch (error) {
     console.log("EDIT COURSE API ERROR............", error)
-    toast.error(error.message)
+    toast.error(error.response?.data?.message || error.message)
   }
   toast.dismiss(toastId)
   return result
@@ -144,7 +144,7 @@ export const createSection = async (data, token) => {
     result = response?.data?.updatedCourseDetails
   } catch (error) {
     console.log("CREATE SECTION API ERROR............", error)
-    toast.error(error.message)
+    toast.error(error.response?.data?.message || error.message)
   }
   toast.dismiss(toastId)
   return result
@@ -166,7 +166,7 @@ export const createSubSection = async (data, token) => {
     result = response?.data?.data?.updatedSection
   } catch (error) {
     console.log("CREATE SUB-SECTION API ERROR............", error)
-    toast.error(error.message)
+    toast.error(error.response?.data?.message || error.message)
   }
   toast.dismiss(toastId)
   return result
@@ -188,7 +188,7 @@ export const updateSection = async (data, token) => {
     result = response?.data?.updatedCourseDetails
   } catch (error) {
     console.log("UPDATE SECTION API ERROR............", error)
-    toast.error(error.message)
+    toast.error(error.response?.data?.message || error.message)
   }
   toast.dismiss(toastId)
   return result
@@ -210,7 +210,7 @@ export const updateSubSection = async (data, token) => {
     result = response?.data?.data
   } catch (error) {
     console.log("UPDATE SUB-SECTION API ERROR............", error)
-    toast.error(error.message)
+    toast.error(error.response?.data?.message || error.message)
   }
   toast.dismiss(toastId)
   return result
@@ -232,7 +232,7 @@ export const deleteSection = async (data, token) => {
     result = response?.data?.updatedCourseDetails
   } catch (error) {
     console.log("DELETE SECTION API ERROR............", error)
-    toast.error(error.message)
+    toast.error(error.response?.data?.message || error.message)
   }
   toast.dismiss(toastId)
   return result

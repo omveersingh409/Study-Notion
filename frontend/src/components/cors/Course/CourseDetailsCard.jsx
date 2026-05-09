@@ -95,8 +95,8 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
                         <div className="flex flex-col gap-3 text-sm text-caribbeangreen-100">
                             {course?.instructions?.map((item, i) => {
                                 return (
-                                    <p className={`flex gap-2`} key={i}>
-                                        <BsFillCaretRightFill />
+                                    <p className={`flex gap-2 items-start`} key={i}>
+                                        <BsFillCaretRightFill className="mt-1 shrink-0" />
                                         <span>{item}</span>
                                     </p>
                                 )

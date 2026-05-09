@@ -12,7 +12,7 @@ exports.auth = async (req, res, next) => {
     const authHeader = req.headers["authorization"] || req.headers["Authorization"];
     console.log("🔑 Auth header:", authHeader);
 
-    const token = req.cookies.token || req.body.token || (authHeader && authHeader.replace("Bearer ", ""));
+    const token = (authHeader && authHeader.replace("Bearer ", "")) || req.cookies.token || req.body.token;
     console.log("🎫 Extracted token:", token ? "Found" : "Not found");
 
     if (!token) {
