@@ -23,7 +23,8 @@ const allowedOrigins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://studynation-frontend2.onrender.com",
-    "https://studynotions-two.vercel.app"
+    "https://studynotions-two.vercel.app",
+    "https://study-notion-delta-two.vercel.app"
 ];
 
 app.use(cors({
