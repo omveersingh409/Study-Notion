@@ -60,6 +60,31 @@ const otpTemplate = (otp) => {
 			.highlight {
 				font-weight: bold;
 			}
+
+			/* Media Query for Mobile Responsiveness */
+			@media screen and (max-width: 600px) {
+				.container {
+					padding: 15px !important;
+					width: 100% !important;
+					box-sizing: border-box !important;
+				}
+				.message {
+					font-size: 16px !important;
+				}
+				.body {
+					font-size: 14px !important;
+				}
+				.logo {
+					max-width: 150px !important;
+				}
+				.cta {
+					font-size: 14px !important;
+					padding: 8px 16px !important;
+				}
+				.highlight {
+					font-size: 24px !important;
+				}
+			}
 		</style>
 	
 	</head>
